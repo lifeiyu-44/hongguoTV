@@ -23,7 +23,7 @@ HONGGUOTV_KEY_PASSWORD   密钥口令
 
 之后运行 `./scripts/Build-Android.ps1 -Release`。APK 位于 `sources/hongguoTV/kotlin-tv/app/build/outputs/apk/release/app-release.apk`。脚本不会将新包自动覆盖到归档发行目录；替换发行文件后，重新运行 `python scripts/inventory.py` 更新校验清单（Python 3.11 或更高版本）。
 
-如需沿用本次版本名称，另设置 `HONGGUOTV_VERSION_NAME=0.9.0-private`，后续覆盖更新时通过 `HONGGUOTV_VERSION_CODE` 增加版本号。Windows 上上游有一项 `File.renameTo` 测试失败，详情见 DELIVERY.md；仅构建签名 APK 可运行 `gradlew.bat -p 项目目录 :app:lintRelease :app:assembleRelease`。Linux CI 会单独跑完整测试。上游 shell 包装器带有 CRLF，CI 只在临时 checkout 中转换包装器行尾，仓库内快照保持原样。
+如需沿用本次版本名称，另设置 `HONGGUOTV_VERSION_NAME=0.9.0-private`，后续覆盖更新时通过 `HONGGUOTV_VERSION_CODE` 增加版本号。Windows 上上游有一项 `File.renameTo` 测试失败，详情见 DELIVERY.md；仅构建签名 APK 可运行 `gradlew.bat -p 项目目录 :app:lintRelease :app:assembleRelease`。Linux CI 可从 Actions 手动运行完整测试。Windows Git 导出可能转换行尾，CI 会在临时 checkout 中移除包装器 CRLF；最终归档使用 `git -c core.autocrlf=false archive` 保留上游原始字节。
 
 源码快照未修改。本次首次构建在工作克隆 `H:\gpt_work_dir\hongguoTV\kotlin-tv` 执行，使用相同 Git 提交；发布前另行核对快照文件。完整环境与结果见 DELIVERY.md。
 

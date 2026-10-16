@@ -4,33 +4,33 @@
 
 | 目录 | 文件数 | 字节数 |
 |---|---:|---:|
-| `sources/hongguo-player/README.md` | 1 | 6,789 |
+| `sources/hongguo-player/README.md` | 1 | 6,663 |
 | `sources/hongguo-player/docs` | 8 | 7,008,992 |
-| `sources/hongguoTV/.dockerignore` | 1 | 86 |
-| `sources/hongguoTV/.env.example` | 1 | 441 |
-| `sources/hongguoTV/.github` | 3 | 6,988 |
-| `sources/hongguoTV/.gitignore` | 1 | 535 |
-| `sources/hongguoTV/.npmrc` | 1 | 104 |
-| `sources/hongguoTV/App.tsx` | 1 | 17,393 |
-| `sources/hongguoTV/LICENSE` | 1 | 35,823 |
-| `sources/hongguoTV/README.md` | 1 | 5,194 |
-| `sources/hongguoTV/android` | 29 | 176,824 |
-| `sources/hongguoTV/app.json` | 1 | 60 |
-| `sources/hongguoTV/babel.config.js` | 1 | 75 |
-| `sources/hongguoTV/compose.yaml` | 1 | 507 |
-| `sources/hongguoTV/docs` | 11 | 62,817 |
-| `sources/hongguoTV/index.js` | 1 | 196 |
-| `sources/hongguoTV/ios` | 10 | 32,632 |
-| `sources/hongguoTV/kotlin-tv` | 95 | 611,662 |
-| `sources/hongguoTV/metro.config.js` | 1 | 312 |
-| `sources/hongguoTV/package-lock.json` | 1 | 318,846 |
-| `sources/hongguoTV/package.json` | 1 | 1,277 |
-| `sources/hongguoTV/scripts` | 5 | 11,185 |
-| `sources/hongguoTV/server` | 12 | 129,317 |
-| `sources/hongguoTV/src` | 9 | 38,308 |
-| `sources/hongguoTV/tests` | 3 | 6,671 |
-| `sources/hongguoTV/tsconfig.json` | 1 | 209 |
-| **总计** | **201** | **8,473,243** |
+| `sources/hongguoTV/.dockerignore` | 1 | 78 |
+| `sources/hongguoTV/.env.example` | 1 | 431 |
+| `sources/hongguoTV/.github` | 3 | 6,808 |
+| `sources/hongguoTV/.gitignore` | 1 | 497 |
+| `sources/hongguoTV/.npmrc` | 1 | 102 |
+| `sources/hongguoTV/App.tsx` | 1 | 16,867 |
+| `sources/hongguoTV/LICENSE` | 1 | 35,149 |
+| `sources/hongguoTV/README.md` | 1 | 5,097 |
+| `sources/hongguoTV/android` | 29 | 176,100 |
+| `sources/hongguoTV/app.json` | 1 | 56 |
+| `sources/hongguoTV/babel.config.js` | 1 | 72 |
+| `sources/hongguoTV/compose.yaml` | 1 | 488 |
+| `sources/hongguoTV/docs` | 11 | 62,174 |
+| `sources/hongguoTV/index.js` | 1 | 187 |
+| `sources/hongguoTV/ios` | 10 | 31,785 |
+| `sources/hongguoTV/kotlin-tv` | 95 | 603,844 |
+| `sources/hongguoTV/metro.config.js` | 1 | 301 |
+| `sources/hongguoTV/package-lock.json` | 1 | 310,662 |
+| `sources/hongguoTV/package.json` | 1 | 1,236 |
+| `sources/hongguoTV/scripts` | 5 | 10,960 |
+| `sources/hongguoTV/server` | 12 | 127,093 |
+| `sources/hongguoTV/src` | 9 | 37,030 |
+| `sources/hongguoTV/tests` | 3 | 6,474 |
+| `sources/hongguoTV/tsconfig.json` | 1 | 203 |
+| **总计** | **201** | **8,449,349** |
 
 ## 源码文件清单
 

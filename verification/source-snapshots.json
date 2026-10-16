@@ -2,11 +2,11 @@
   {
     "project": "hongguoTV",
     "files": 192,
-    "exact_snapshot_match": true
+    "upstream_git_blobs_and_modes_match": true
   },
   {
     "project": "hongguo-player",
     "files": 9,
-    "exact_snapshot_match": true
+    "upstream_git_blobs_and_modes_match": true
   }
 ]

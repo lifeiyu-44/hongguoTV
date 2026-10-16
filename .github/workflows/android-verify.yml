@@ -1,9 +1,5 @@
 name: Verify archived Android source
 on:
-  push:
-    paths:
-      - 'sources/hongguoTV/kotlin-tv/**'
-      - '.github/workflows/android-verify.yml'
   workflow_dispatch:
 permissions:
   contents: read

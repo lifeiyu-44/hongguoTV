@@ -4,7 +4,7 @@
 
 个人私有仓库：https://github.com/lifeiyu-44/hongguoTV 。
 
-两个 Git 快照共 201 个文件、8,473,243 字节：Android 项目 192 个文件，桌面发布仓库 9 个文件。导出文件内容和暂存区 Git blob 均逐个核对，全部与指定上游提交一致；原来的可执行文件权限也已保留。来源与完整目录见 PROVENANCE.md 和 DIRECTORY_TREE.md。
+两个 Git 快照共 201 个文件、8,449,349 字节：Android 项目 192 个文件，桌面发布仓库 9 个文件。导出时关闭 Windows 行尾自动转换，暂存区 Git blob 和文件权限逐个核对，全部与指定上游提交一致。来源与完整目录见 PROVENANCE.md 和 DIRECTORY_TREE.md。
 
 Windows 为 `hongguo-player v1.2.2` 原始发行包，EXE 与完整 ZIP 的 SHA-256 均与 GitHub 上游 Release digest 一致。配套 WebView2/HEVC 安装文件原样保留。桌面仓库不公开构建源码，因此没有重新编译 EXE。
 
@@ -56,4 +56,4 @@ Windows 桌面版与 Android 使用不同实现。归档保留已核对过哈希
 
 ## 下载
 
-私有发布页：https://github.com/lifeiyu-44/hongguoTV/releases/tag/archive-2026-10-16 。访问需要有仓库权限的 GitHub 账号。Release 提供 APK、Windows 完整 ZIP、主 EXE 和 SHA-256 清单；Git 仓库也直接保留这些文件和配套安装程序。
+私有发布页：https://github.com/lifeiyu-44/hongguoTV/releases/tag/archive-2026-10-16-final 。访问需要有仓库权限的 GitHub 账号。Release 提供 APK、Windows 完整 ZIP、主 EXE 和 SHA-256 清单；Git 仓库也直接保留这些文件和配套安装程序。
