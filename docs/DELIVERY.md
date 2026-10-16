@@ -28,6 +28,12 @@ Windows 为 `hongguo-player v1.2.2` 原始发行包，EXE 与完整 ZIP 的 SHA-
 
 仓库另配置 Linux CI 执行完整 JVM 测试、Debug lint 与 Debug APK 构建，不使用或上传本机签名私钥。Windows 上如只需构建 APK，可直接运行 `:app:lintRelease :app:assembleRelease`；默认 `Build-Android.ps1` 会严格执行测试，并如实报告上述 Windows 失败。
 
+## Linux CI 最终结果
+
+[验证运行 38886212325](https://github.com/lifeiyu-44/hongguoTV/actions/runs/38886212325) 已成功：83 项 JVM 测试全部通过，0 失败；Debug lint 为 0 错误、30 警告；Debug APK 构建成功。完整 HTML 测试报告、lint 报告和开发 APK 已作为该运行的 `android-verification` artifact 上传。
+
+CI 检查提交 `6f0ecee`；随后源码快照只还原了 Windows 导出转换过的行尾，`git diff --ignore-space-at-eol` 确认没有代码差异。最终快照的全部 Git blob 和可执行权限与上游逐个匹配。测试摘要见 `verification/linux-test-summary.json`。
+
 ## 本次签名 APK
 
 - 文件：`artifacts/android/hongguotv-kotlin-0.9.0-private-android8.apk`，2,677,001 字节。

@@ -1,0 +1,11 @@
+{
+  "debugLintWarnings": 30,
+  "tests": 83,
+  "debugLintErrors": 0,
+  "runUrl": "https://github.com/lifeiyu-44/hongguoTV/actions/runs/38886212325",
+  "subsequentSourceChanges": "line endings only, verified with git diff --ignore-space-at-eol",
+  "debugApkBuild": "success",
+  "testedCommit": "6f0eceec725ba933c4c91f49526861f947943c0b",
+  "successRate": "100%",
+  "failures": 0
+}
