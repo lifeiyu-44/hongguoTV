@@ -21,6 +21,8 @@ jobs:
         with:
           packages: platform-tools
       - run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+      - name: Prepare upstream Windows line endings for Linux shell
+        run: sed -i 's/\r$//' sources/hongguoTV/kotlin-tv/gradlew
       - name: Test, lint and build unchanged upstream source
         run: ./sources/hongguoTV/kotlin-tv/gradlew -p sources/hongguoTV/kotlin-tv :core:test :app:lintDebug :app:assembleDebug --console=plain
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
