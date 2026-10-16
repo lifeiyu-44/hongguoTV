@@ -1,0 +1,183 @@
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\Library.kt:73: Warning: Consider using apply() instead; commit writes its data to persistent storage immediately, whereas apply will handle it in the background [ApplySharedPref]
+                    prefs.edit().also { edit -> oldKeys.forEach(edit::remove) }.commit()
+                                                                                ~~~~~~~~
+
+   Explanation for issues of type "ApplySharedPref":
+   Consider using apply() instead of commit on shared preferences. Whereas
+   commit blocks and writes its data to persistent storage immediately, apply
+   will handle it in the background.
+
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\AndroidManifest.xml:7: Warning: Attribute enableOnBackInvokedCallback is only used in API level 33 and higher (current min is 26) [UnusedAttribute]
+    <application android:label="红果 TV 原生版" android:theme="@style/AppTheme" android:icon="@drawable/app_icon" android:banner="@drawable/tv_banner" android:allowBackup="false" android:enableOnBackInvokedCallback="false" android:usesCleartextTraffic="true" android:networkSecurityConfig="@xml/network_security_config" android:supportsRtl="true">
+                                                                                                                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedAttribute":
+   This check finds attributes set in XML files that were introduced in a
+   version newer than the oldest version targeted by your application (with
+   the minSdkVersion attribute).
+
+   This is not an error; the application will simply ignore the attribute.
+   However, if the attribute is important to the appearance or functionality
+   of your application, you should consider finding an alternative way to
+   achieve the same result with only available attributes, and then you can
+   optionally create a copy of the layout in a layout-vNN folder which will be
+   used on API NN or higher where you can take advantage of the newer
+   attribute.
+
+   Note: This check does not only apply to attributes. For example, some tags
+   can be unused too, such as the new <tag> element in layouts introduced in
+   API 21.
+
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\build.gradle.kts:32: Warning: A newer version of androidx.core:core than 1.8.0 is available: 1.13.1 [GradleDependency]
+    implementation("androidx.core:core:1.8.0")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\build.gradle.kts:33: Warning: A newer version of com.google.zxing:core than 3.5.3 is available: 3.5.4 [NewerVersionAvailable]
+    implementation("com.google.zxing:core:3.5.3")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\build.gradle.kts:35: Warning: A newer version of com.squareup.okhttp3:okhttp than 4.12.0 is available: 5.5.0 [NewerVersionAvailable]
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NewerVersionAvailable":
+   This detector checks with a central repository to see if there are newer
+   versions available for the dependencies used by this project. This is
+   similar to the GradleDependency check, which checks for newer versions
+   available in the Android SDK tools and libraries, but this works with any
+   MavenCentral dependency, and connects to the library every time, which
+   makes it more flexible but also much slower.
+
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\AndroidManifest.xml:11: Warning: Fixed screen orientations will be ignored in most cases, starting from Android 16. Android is moving toward a model where apps are expected to adapt to various orientations, display sizes, and aspect ratios. [DiscouragedApi]
+        <activity android:name=".MainActivity" android:exported="true" android:screenOrientation="landscape" android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize|screenLayout|uiMode" android:launchMode="singleTop">
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "DiscouragedApi":
+   Discouraged APIs are allowed and are not deprecated, but they may be unfit
+   for common use (e.g. due to slow performance or subtle behavior).
+
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\AndroidManifest.xml:7: Warning: The attribute android:allowBackup is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute android:dataExtractionRules specifying an @xml resource which configures cloud backups and device transfers on Android 12 and higher. [DataExtractionRules]
+    <application android:label="红果 TV 原生版" android:theme="@style/AppTheme" android:icon="@drawable/app_icon" android:banner="@drawable/tv_banner" android:allowBackup="false" android:enableOnBackInvokedCallback="false" android:usesCleartextTraffic="true" android:networkSecurityConfig="@xml/network_security_config" android:supportsRtl="true">
+                                                                                                                                                                       ~~~~~
+
+   Explanation for issues of type "DataExtractionRules":
+   Before Android 12, the attributes android:allowBackup and
+   android:fullBackupContent were used to configure all forms of backup,
+   including cloud backups, device-to-device transfers and adb backup.
+
+   In Android 12 and higher, these attributes have been deprecated and will
+   only apply to cloud backups. You should instead use the attribute
+   android:dataExtractionRules, specifying an @xml resource that configures
+   which files to back up, for cloud backups and for device-to-device
+   transfers, separately. If your minSdkVersion supports older versions,
+   you'll still want to specify an android:fullBackupContent resource if the
+   default behavior is not right for your app.
+
+   https://developer.android.com/about/versions/12/backup-restore#xml-changes
+   https://goo.gle/DataExtractionRules
+
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\res\drawable\tv_banner.png: Warning: Found bitmap drawable res/drawable/tv_banner.png in densityless folder [IconLocation]
+
+   Explanation for issues of type "IconLocation":
+   The res/drawable folder is intended for density-independent graphics such
+   as shapes defined in XML. For bitmaps, move it to drawable-mdpi and
+   consider providing higher and lower resolution versions in drawable-ldpi,
+   drawable-hdpi and drawable-xhdpi. If the icon really is density independent
+   (for example a solid color) you can place it in drawable-nodpi.
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\HomeScreen.kt:35: Warning: Custom view HomeScreen is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int) [ViewConstructor]
+class HomeScreen(
+      ~~~~~~~~~~
+
+   Explanation for issues of type "ViewConstructor":
+   Some layout tools (such as the Android layout editor) need to find a
+   constructor with one of the following signatures:
+   * View(Context context)
+   * View(Context context, AttributeSet attrs)
+   * View(Context context, AttributeSet attrs, int defStyle)
+
+   If your custom view needs to perform initialization which does not apply
+   when used in a layout editor, you can surround the given code with a check
+   to see if View#isInEditMode() is false, since that method will return false
+   at runtime but true within a user interface editor.
+
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\MainActivity.kt:638: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        homeUpdates?.text="收藏更新 ${library.updatedFavorites()} 部"
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\MainActivity.kt:645: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                home.refresh.text="收藏更新 ${library.updatedFavorites()} 部 · 按确认查看"
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\MainActivity.kt:684: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            autoNextButton.text="自动连播  ·  ${if(library.autoNext) "开启" else "关闭"}"
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\MainActivity.kt:846: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        playbackTitle.text="${data.series.title}  ·  第 ${episodeIndex+1} 集"
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\MainActivity.kt:846: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        playbackTitle.text="${data.series.title}  ·  第 ${episodeIndex+1} 集"
+                                                         ~~~~~~~~~~~~~~
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\MainActivity.kt:940: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        if(!networkAvailable()) { playbackText.text="网络已断开，联网后自动续播 · 第 ${episodeIndex+1} 集 ${formatTime(retryPosition)}"; return }
+                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\MainActivity.kt:940: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        if(!networkAvailable()) { playbackText.text="网络已断开，联网后自动续播 · 第 ${episodeIndex+1} 集 ${formatTime(retryPosition)}"; return }
+                                                                         ~~~~~~~~~~~~~~
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\MainActivity.kt:942: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        playbackText.text="${if(retryAutoplay) "准备恢复播放" else "准备恢复暂停位置"} · ${delay/1000f} 秒后重试 ${recovery.attempts+1}/3 · ${formatTime(retryPosition)}"
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\MainActivity.kt:942: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        playbackText.text="${if(retryAutoplay) "准备恢复播放" else "准备恢复暂停位置"} · ${delay/1000f} 秒后重试 ${recovery.attempts+1}/3 · ${formatTime(retryPosition)}"
+                                                                                                 ~~~~~~~~~~~~~~~~~~~
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\MainActivity.kt:973: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        sleepButton?.text="定时 ${sleepTimer.label()}"
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\MainActivity.kt:976: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        if(!playbackReady) { playbackText.text=(if(!requestedAutoplay) "准备后保持暂停 · " else "")+if(video==null) "正在获取播放地址…" else "正在缓冲…"; return }
+                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\MainActivity.kt:980: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        playbackText.text="$state  ·  ${formatTime(position)} / ${formatTime(duration)}  ·  $quality  ·  ${PlaybackSpeed.label(p.playbackParameters.speed)}"+(if(sleepTimer.active) "  ·  定时 ${sleepTimer.label()}" else "")
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\MainActivity.kt:980: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        playbackText.text="$state  ·  ${formatTime(position)} / ${formatTime(duration)}  ·  $quality  ·  ${PlaybackSpeed.label(p.playbackParameters.speed)}"+(if(sleepTimer.active) "  ·  定时 ${sleepTimer.label()}" else "")
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\MainActivity.kt:1030: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            if(anchor.tag!="playback-settings") anchor.text="定时 ${sleepTimer.label()}"; updatePlaybackText(); showHud()
+                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\MainActivity.kt:1041: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            if(anchor.tag!="playback-settings") anchor.text=(if(inPlayer) "画面 " else "画面模式  ·  ")+library.frameMode.label
+                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\MainActivity.kt:1085: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                if(anchor.tag!="playback-settings") anchor.text=(if(inPlayer) "倍速 " else "默认倍速  ·  ")+PlaybackSpeed.label(library.playbackSpeed)
+                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\MainActivity.kt:1102: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                if(anchor.tag!="playback-settings") anchor.text=(if(inPlayer) "清晰度 " else "默认清晰度  ·  ")+"${target}P"
+                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\MainActivity.kt:1102: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                if(anchor.tag!="playback-settings") anchor.text=(if(inPlayer) "清晰度 " else "默认清晰度  ·  ")+"${target}P"
+                                                                                                        ~~~~~~~~~~~~
+H:\gpt_work_dir\hongguoTV\kotlin-tv\app\src\main\kotlin\com\hongguotv\nativeapp\TvTools.kt:92: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            if(target==null) error.text="请输入 1—$count 之间的集数"
+                                        ~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+0 errors, 28 warnings

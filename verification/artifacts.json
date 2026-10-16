@@ -1,5 +1,10 @@
 [
   {
+    "path": "artifacts/android/hongguotv-kotlin-0.9.0-private-android8.apk",
+    "size": 2677001,
+    "sha256": "0d828ebdbdc475dea1bbf1e2a05526b41c140db5b10ba092997149af1c1f6105"
+  },
+  {
     "path": "artifacts/windows/HEVC视频扩展-双击安装.appx",
     "size": 2491371,
     "sha256": "46695112aa70a05faf71c69ecf4ff0502a3b82d152168d3ffb67219eafe51b85"

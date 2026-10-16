@@ -16,6 +16,10 @@ Windows 使用：下载 `artifacts/windows/hongguo-v1.2.2-windows-amd64.zip`，�
 
 Android APK 的签名、安装方式和实际验证结果以 [交付记录](docs/DELIVERY.md) 为准。
 
+**本次 Android APK 已通过构建、签名和 MuMu 安装，首页与详情正常，但实际播放失败，自动重试后仍未恢复。** Windows v1.2.2 有同日既有播放成功记录，本轮重新核对了其发行文件哈希。
+
+[下载本次私有发布包](https://github.com/lifeiyu-44/hongguoTV/releases/tag/archive-2026-10-16)（需要仓库访问权限）。
+
 这是个人备份，Windows EXE 为上游原始发行文件，并非从 Android 工程转换或重新编译而来。Android 源码沿用上游 GPL-3.0 许可，原始 LICENSE/NOTICE 完整保留；桌面项目不公开源码，其说明见 `sources/hongguo-player/README.md`。
 
 - [来源和源码版本](docs/PROVENANCE.md)

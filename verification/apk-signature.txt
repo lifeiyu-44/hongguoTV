@@ -1,0 +1,17 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=HongguoTV Private Archive
+Signer #1 certificate SHA-256 digest: 29609e5f0ac5e58fbcef98948b2a0f8bf4940c5c52387fd139addd87037b86d4
+Signer #1 certificate SHA-1 digest: a90e138fe6567533a53439a1564d860f7e5eff17
+Signer #1 certificate MD5 digest: 596e5a25df9bf2ce4db8664fb2130ac8
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 3072
+Signer #1 public key SHA-256 digest: 49403ef528b8513ef140e3e45d974ffb4106509d9ff595a7a2bbd85e7e2a1bc5
+Signer #1 public key SHA-1 digest: d47a78cca87fd78659f8b11464c9a9f91a052708
+Signer #1 public key MD5 digest: b1e98340f3edbc6d9fb5d29515d264ce

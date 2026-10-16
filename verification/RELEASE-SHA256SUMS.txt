@@ -1,0 +1,3 @@
+0d828ebdbdc475dea1bbf1e2a05526b41c140db5b10ba092997149af1c1f6105  hongguotv-kotlin-0.9.0-private-android8.apk
+4c484e00ef25bc520944605b6663dfdeeafed5fda21306b8a0c585eb78e28e84  hongguo-v1.2.2-windows-amd64.zip
+f040009e0a5e12cc2a414a226ddfa5830256bd6775ef1c9a7c478e2441e2e3b4  hongguo-v1.2.2-windows-amd64.exe

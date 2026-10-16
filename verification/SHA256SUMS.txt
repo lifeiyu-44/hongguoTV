@@ -1,3 +1,4 @@
+0d828ebdbdc475dea1bbf1e2a05526b41c140db5b10ba092997149af1c1f6105  artifacts/android/hongguotv-kotlin-0.9.0-private-android8.apk
 46695112aa70a05faf71c69ecf4ff0502a3b82d152168d3ffb67219eafe51b85  artifacts/windows/HEVC视频扩展-双击安装.appx
 4c484e00ef25bc520944605b6663dfdeeafed5fda21306b8a0c585eb78e28e84  artifacts/windows/hongguo-v1.2.2-windows-amd64.zip
 7ebc4ce80143ef89cea86a61ea151502868db6caaa678b8b43660a66ace11c3a  artifacts/windows/MicrosoftEdgeWebview2Setup.exe
