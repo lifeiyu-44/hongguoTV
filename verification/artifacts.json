@@ -1,0 +1,27 @@
+[
+  {
+    "path": "artifacts/windows/HEVC视频扩展-双击安装.appx",
+    "size": 2491371,
+    "sha256": "46695112aa70a05faf71c69ecf4ff0502a3b82d152168d3ffb67219eafe51b85"
+  },
+  {
+    "path": "artifacts/windows/hongguo-v1.2.2-windows-amd64.zip",
+    "size": 14282695,
+    "sha256": "4c484e00ef25bc520944605b6663dfdeeafed5fda21306b8a0c585eb78e28e84"
+  },
+  {
+    "path": "artifacts/windows/MicrosoftEdgeWebview2Setup.exe",
+    "size": 1793816,
+    "sha256": "7ebc4ce80143ef89cea86a61ea151502868db6caaa678b8b43660a66ace11c3a"
+  },
+  {
+    "path": "artifacts/windows/使用说明.txt",
+    "size": 2554,
+    "sha256": "8feffd8af8ea0ca35579fd1d08dae49c789f7d30ec57220362e4ff9c0a84119c"
+  },
+  {
+    "path": "artifacts/windows/红果短剧.exe",
+    "size": 25897984,
+    "sha256": "f040009e0a5e12cc2a414a226ddfa5830256bd6775ef1c9a7c478e2441e2e3b4"
+  }
+]

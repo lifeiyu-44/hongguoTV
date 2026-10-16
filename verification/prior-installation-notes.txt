@@ -1,0 +1,20 @@
+红果短剧安装结果（2026-10-16）
+
+电脑版：已安装并运行，桌面双击“红果短剧（电脑版）”。
+版本：hongguo-player v1.2.2，第三方客户端。
+来源：https://github.com/yangbin1322/hongguo-player/releases/tag/v1.2.2
+下载ZIP的SHA256：4c484e00ef25bc520944605b6663dfdeeafed5fda21306b8a0c585eb78e28e84
+已验证：推荐播放、找剧片库、从片库打开“消失的她之暗夜惊魂”第1集，播放到00:29 / 01:38，画面持续变化，空格暂停正常，显示共30集。
+程序当前停在暂停画面。空格可继续播放；右下角“选集”可切换集数。
+程序启动时已自行安装带有微软有效签名的HEVC视频扩展2.5.33.0。
+电脑已具备Microsoft Edge WebView2 Runtime，无需Docker或Node服务。
+请保留“红果短剧电脑版”整个文件夹，以免桌面快捷方式失效。
+应用当前公告提示：平台接口变化后部分功能可能需要用户自行登录。
+
+MuMu：原项目hongguoTV原生版0.8.0已安装并保留，桌面入口“红果TV（MuMu）”。
+包名：com.hongguotv.nativeapp，使用原有第0号Android 15设备。
+来源：https://github.com/N3urda/hongguoTV/releases/tag/kotlin-v0.8.0
+APK SHA256：765025a899950616ec07f03e0723507528190831d4aaf06d1ce0ef76a18a198e
+已验证首页、剧名、海报、短剧分类、详情正常；实际播放失败，720P及自动重试无效。
+项目同类反馈：https://github.com/N3urda/hongguoTV/issues/17
+MuMu中的版本目前不能保证看剧，请优先使用已验证的电脑版。

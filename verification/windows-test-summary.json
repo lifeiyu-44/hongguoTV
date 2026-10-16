@@ -1,0 +1,10 @@
+{
+  "failure": "File.renameTo cannot replace an existing destination on this Windows host",
+  "errors": 0,
+  "tests": 83,
+  "jdk": "17.0.20.1+1",
+  "failures": 1,
+  "failedTest": "AppUpdatesTest.verifiedDownloadAtomicallyReplacesOldFile",
+  "host": "Windows",
+  "android15RenameProbe": "PASS: renamed=true; content=verified-new-apk"
+}
