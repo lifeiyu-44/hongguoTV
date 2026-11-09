@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 下载最新版
+    url: https://github.com/yangbin1322/hongguo-player/releases/latest
+    about: 很多问题更新到最新版就好了，提交前请先更新
+  - name: 程序内反馈
+    url: https://hongguo.235698.xyz
+    about: 也可以在程序左侧点「反馈」提交 (可留邮箱，处理后通知你)

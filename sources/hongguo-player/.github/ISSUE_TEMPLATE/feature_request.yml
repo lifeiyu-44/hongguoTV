@@ -1,0 +1,51 @@
+name: 功能建议
+description: 想要的新功能或改进
+title: "[建议] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢建议！提交前请先搜索一下已有的 issue，相同的建议可以直接在原 issue 下点 👍 或补充说明。
+
+  - type: input
+    id: version
+    attributes:
+      label: 当前使用的版本号
+      description: 在程序左下角「设置」页查看
+      placeholder: "1.2.16"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: 操作系统
+      options:
+        - Windows
+        - macOS
+        - 都需要
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature
+    attributes:
+      label: 想要什么功能
+      description: 具体说明希望怎么用、放在哪里
+    validations:
+      required: true
+
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 使用场景
+      description: 什么情况下需要它？现在是怎么凑合的？
+    validations:
+      required: true
+
+  - type: textarea
+    id: reference
+    attributes:
+      label: 参考 / 截图 (选填)
+      description: 手机红果 App 或其他软件里类似功能的截图，直接拖到这里

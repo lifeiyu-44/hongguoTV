@@ -1,0 +1,137 @@
+name: 问题反馈 (Bug)
+description: 播放失败、卡顿、黑屏、没声音、登录、弹幕、下载、更新、报毒等问题
+title: "[问题] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请尽量填完整，**附上截图**和**剧名 / 第几集**，问题能更快定位。
+        提交前请先到 [Releases](https://github.com/yangbin1322/hongguo-player/releases/latest) 更新到最新版，再确认问题是否还在。
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已更新到最新版本，问题仍然存在
+          required: true
+        - label: 我已搜索过已有的 issue，没有相同的问题
+          required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 程序版本号
+      description: 在程序左下角「设置」页查看，例如 1.2.16
+      placeholder: "1.2.16"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: 操作系统
+      options:
+        - Windows 11
+        - Windows 10
+        - Windows 10 / 11 LTSC 或精简版
+        - Windows 7 / 8 / 其他
+        - macOS (Apple 芯片 M1/M2/M3/M4…)
+        - macOS (Intel 芯片)
+    validations:
+      required: true
+
+  - type: input
+    id: os-detail
+    attributes:
+      label: 系统版本 / 显卡 (选填)
+      description: 播放黑屏、卡顿、有声音没画面时请填写，例如 "Win11 24H2，RTX 4060" 或 "macOS 15.7，M1 Pro"
+      placeholder: "Win11 24H2，NVIDIA RTX 4060"
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 问题类型
+      options:
+        - 播放失败 / 无法播放
+        - 卡顿 / 转圈 / 加载慢
+        - 黑屏 / 有声音没画面 / 绿屏
+        - 没声音 / 音画不同步
+        - 清晰度 / 画质
+        - 登录 / 账号
+        - 弹幕 / 评论
+        - 推荐刷剧 / 选集 / 下一集 / 下一季
+        - 下载 / 离线播放
+        - 自动更新 / 安装 / 报毒
+        - 界面 / 快捷键 / 全屏 / 小窗
+        - 其他
+    validations:
+      required: true
+
+  - type: input
+    id: series
+    attributes:
+      label: 剧名
+      description: 和播放、选集、弹幕、下载有关的问题请务必填写 (与具体剧无关可留空)
+      placeholder: "例如：无敌财神！我觉醒了唯一隐藏职业 第三季"
+
+  - type: input
+    id: episode
+    attributes:
+      label: 第几集 / 出问题的时间点
+      description: 例如 "第 12 集，大约 00:45"；每集都会出现就写 "每集"
+      placeholder: "第 12 集，00:45"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 发生了什么？你期望的结果是什么？
+      placeholder: |
+        现象：
+        期望：
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 怎样操作能让问题再次出现？多久出现一次？
+      placeholder: |
+        1. 打开「推荐」页
+        2. 全屏播放，播完第 1 集
+        3. 进入第 2 集后点返回
+        4. 出现 …
+        出现频率：每次 / 偶尔 / 只出现过一次
+    validations:
+      required: true
+
+  - type: textarea
+    id: error
+    attributes:
+      label: 报错提示原文 (选填)
+      description: 画面上的报错文字请原样复制粘贴 (不要只写"报错了")
+      render: text
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 截图 / 录屏
+      description: |
+        **强烈建议附上**：直接把图片或视频拖到这个框里，或用 Ctrl+V 粘贴截图。
+        报错弹窗、播放画面、设置页里的解码方式都可以截。
+      placeholder: 把截图拖到这里
+
+  - type: dropdown
+    id: network
+    attributes:
+      label: 网络环境 (选填)
+      description: 加载失败、注册设备失败、超时类问题与 VPN / 代理 / 广告拦截软件关系很大
+      options:
+        - 没有开 VPN / 代理 / 广告拦截
+        - 开了 VPN / 代理 (Clash、v2rayN、sing-box 等)
+        - 开了广告拦截 (AdGuard 等)
+        - 在国外 / 港澳台
+        - 不清楚
